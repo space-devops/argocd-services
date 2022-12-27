@@ -8,8 +8,8 @@ metadata:
 spec:
   description: "Space Devops Project"
   clusterResourceWhitelist:
-    - group: ''
-      kind: 'Namespace'
+    - group: '*'
+      kind: '*'
   sourceRepos:
     - '*'
   destinations:
