@@ -7,6 +7,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   description: "Space Devops Project"
+  clusterResourceWhitelist:
+    - group: ''
+      kind: 'Namespace'
   sourceRepos:
     - '*'
   destinations:
