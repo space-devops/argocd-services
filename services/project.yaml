@@ -9,3 +9,12 @@ spec:
   description: "Space Devops Project"
   sourceRepos:
     - '*'
+  destinations:
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+    - namespace: mountebank
+      server: https://kubernetes.default.svc
+    - namespace: projectcontour
+      server: https://kubernetes.default.svc
+    - namespace: sealed-secrets
+      server: https://kubernetes.default.svc
