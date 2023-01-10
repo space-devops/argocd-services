@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istiobase-app
+  name: istiogateway-app
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "6"
