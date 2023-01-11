@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mountebank-api-app
+  name: istioaddons-app
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "7"
+    argocd.argoproj.io/sync-wave: "4"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: mountebank
+    namespace: istio-system
   project: space-project
   syncPolicy:
     automated:
@@ -18,5 +18,5 @@ spec:
       selfHeal: true
   source:
     repoURL: https://github.com/space-devops/kustomize-services
-    path: ./mountebank-api/overlays/dev/
+    path: ./istio-addons/overlays/dev
     targetRevision: HEAD
